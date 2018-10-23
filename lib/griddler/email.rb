@@ -32,7 +32,7 @@ module Griddler
       @body = extract_body
       @raw_text = params[:text]
       @raw_html = params[:html]
-      @raw_body = @raw_text.presence || @raw_html
+      @raw_body = params[:raw_body].presence || @raw_text.presence || @raw_html
 
       @headers = extract_headers
 
